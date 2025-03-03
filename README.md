@@ -1,4 +1,8 @@
 # Eng :
+- Go to Control Panel | Programs and features | Turn windows features on or off
+- Tick Hyper-V | Hyper-V Management tools | Hyper-V Module for Windows PowerShell
+- When installed, reboot if asked
+
 ## 🛠️ WSL Disk Space Optimization
 
 Are you using WSL and noticing an abnormally full disk, especially with **Exegol** after each update?
@@ -20,6 +24,10 @@ wsl --shutdown; $vhdxPath = Get-ChildItem -Path "$env:LOCALAPPDATA\Packages" -Fi
 
 
 # FR :
+- Allez dans Panneau de configuration | Programmes et fonctionnalités | Activer ou désactiver les fonctionnalités de Windows
+- Cochez Hyper-V | Outils de gestion Hyper-V | Module Hyper-V pour Windows PowerShell
+- Une fois installé, redémarrez si cela vous est demandé
+
 ## 🛠️ Optimisation de l'espace disque WSL
 
 Vous utilisez WSL et constatez un problème d’espace disque anormalement plein, notamment avec **Exegol** après chaque mise à jour ?
