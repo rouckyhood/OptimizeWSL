@@ -18,7 +18,7 @@ WSL does not properly release disk space when a file is deleted. Even after clea
 
 📌 **Open PowerShell as administrator and run this command:**
 ```powershell
-wsl --shutdown; $vhdxPath = Get-ChildItem -Path "$env:LOCALAPPDATA\Packages" -Filter "CanonicalGroupLimited.Ubuntu_*" | Select-Object -First 1 | ForEach-Object { "$($_.FullName)\LocalState\ext4.vhdx" }; if (Test-Path $vhdxPath) { Optimize-VHD -Path $vhdxPath -Mode Full; Write-Output "Optimization completed: $vhdxPath" } else { Write-Output "ext4.vhdx file not found." }
+wsl --shutdown; $vhdxPath = Get-ChildItem -Path "$env:LOCALAPPDATA\Packages" -Filter "CanonicalGroupLimited.Ubuntu*" | Select-Object -First 1 | ForEach-Object { "$($_.FullName)\LocalState\ext4.vhdx" }; if (Test-Path $vhdxPath) { Optimize-VHD -Path $vhdxPath -Mode Full; Write-Output "Optimization completed: $vhdxPath" } else { Write-Output "ext4.vhdx file not found." }
 ```
 
 
@@ -43,5 +43,5 @@ WSL ne libère pas correctement l’espace disque lorsqu’un fichier est suppri
 
 📌 **Ouvrez PowerShell en mode administrateur et exécutez cette commande :**
 ```powershell
-wsl --shutdown; $vhdxPath = Get-ChildItem -Path "$env:LOCALAPPDATA\Packages" -Filter "CanonicalGroupLimited.Ubuntu_*" | Select-Object -First 1 | ForEach-Object { "$($_.FullName)\LocalState\ext4.vhdx" }; if (Test-Path $vhdxPath) { Optimize-VHD -Path $vhdxPath -Mode Full; Write-Output "Optimisation terminée : $vhdxPath" } else { Write-Output "Fichier ext4.vhdx introuvable." }
+wsl --shutdown; $vhdxPath = Get-ChildItem -Path "$env:LOCALAPPDATA\Packages" -Filter "CanonicalGroupLimited.Ubuntu*" | Select-Object -First 1 | ForEach-Object { "$($_.FullName)\LocalState\ext4.vhdx" }; if (Test-Path $vhdxPath) { Optimize-VHD -Path $vhdxPath -Mode Full; Write-Output "Optimisation terminée : $vhdxPath" } else { Write-Output "Fichier ext4.vhdx introuvable." }
 ```
